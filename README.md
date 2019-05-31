@@ -6,3 +6,5 @@ Commit message很重要，方便以后看这次更新了什么，不必打开代
 新建一个branch进行desktop学习//pull request 加上
 
 revert了一下，奥
+
+福建垃圾分类卡积分可垃圾啊，为了merge
