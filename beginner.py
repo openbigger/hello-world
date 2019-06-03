@@ -42,3 +42,10 @@ copy_of_bikes = bikes#[:]
 dimensions = (1920,1080)
 
 #If statements
+if 'trek' in bikes:
+    print("You can vote!")
+
+#Dictionaries
+alien = {'color':'green', 'point':5}
+print("the alien's color is "+ alien['color'])
+print(("the alien's point is %d" + "!")%alien['point'])#<<<<====数字字符串混入
