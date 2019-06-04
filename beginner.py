@@ -49,3 +49,4 @@ if 'trek' in bikes:
 alien = {'color':'green', 'point':5}
 print("the alien's color is "+ alien['color'])
 print(("the alien's point is %d" + "!")%alien['point'])#<<<<====数字字符串混入
+
