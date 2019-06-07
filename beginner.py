@@ -50,3 +50,21 @@ alien = {'color':'green', 'point':5}
 print("the alien's color is "+ alien['color'])
 print(("the alien's point is %d" + "!")%alien['point'])#<<<<====数字字符串混入
 
+alien['x_position'] = 8
+fav_numbers = {'eric':17, 'kenny':'4'}
+fav_string=[]
+for name, number in fav_numbers.items():
+    fav_string.append(name + ' loves ' + str(number))
+    print(fav_string[-1])
+
+alien_keys = alien.keys()
+alien_values = alien.values()
+alien_one_value = alien[alien_keys[1]] #x_postion:8
+
+name = raw_input("what's your name?")
+name
+print("hello, " + name.rstrip() + "!")
+age = input("how old are you?")
+age = int(age)
+pi = input("pi?3.14 or 3.141")
+pi = float(pi)

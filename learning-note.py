@@ -1,3 +1,5 @@
+#encoding: utf-8
+#上面那句不加就不能写中文
 #python learning note
 #索引
 #字符串"abcdef"
@@ -22,3 +24,17 @@ print s[0:-1:2]    #ace
 print s[1::2]      #bdf
 print s * 2        #abcdefabcdef
 print s + ", " + s #abcdef, abcdef
+
+#关于input，python2.x
+#input()可输入数字和字符串，输入string需要加引号，否则无法识别
+#raw_input()只能输入字符串，得到的字符串后有\r
+#使用raw_input()得到的字符串需要用.rstrip()
+name = input("input your name?")         #"ahem"
+name                                     #'ahem'
+name = raw_input("rawinput your name?")  # ahem
+name                                     #'ahem\r'
+print("hello, " + name.rstrip() + "!")
+'''age = input("how old are you?")
+age = int(age)
+pi = input("pi?3.14 or 3.141")
+pi = float(pi)'''
