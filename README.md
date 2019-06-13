@@ -8,3 +8,9 @@ Commit message很重要，方便以后看这次更新了什么，不必打开代
 revert了一下，奥
 
 福建垃圾分类卡积分可垃圾啊，为了merge
+
+13/06/2019 
+installed Git in CentOS 7
+learnt how to use git and github in CentOS7
+generated one new python code file and push it
+
