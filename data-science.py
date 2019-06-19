@@ -50,3 +50,6 @@ c = np.arange(3)
 a = temp_array[c,b] 
 a +=10
 a
+
+# test print
+print('a')
