@@ -4,6 +4,8 @@
 #风格规范
 #https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/
 
+#terminal 里输入python（黄字）就进入python输入结界，以>>>开头
+
 #布尔
 #0， None, [], {}, “” 都被认为是false.
 #if x: 表示的是 if x is not None
@@ -20,17 +22,17 @@
 #截取时,0就是:，只有:时代表全员
 #第一个参数是起始编号，第二个是终止编号，第三个是步长，可省。
 s="abcdef"
-print s            #abcdef
-print s[:]         #abcdef  
-print s[3]         #d (单纯索引)
-print s[-5]        #b
-print s[2:]        #cdef
-print s[-2:]       #ef  
-print s[1:4]       #bcd
-print s[0:-1:2]    #ace 
-print s[1::2]      #bdf
-print s * 2        #abcdefabcdef
-print s + ", " + s #abcdef, abcdef
+print(s)            #abcdef
+print(s[:])         #abcdef  
+print(s[3])         #d (单纯索引)
+print(s[-5])        #b
+print(s[2:])        #cdef
+print(s[-2:])       #ef  
+print(s[1:4])       #bcd
+print(s[0:-1:2])    #ace 
+print(s[1::2])      #bdf
+print(s * 2)        #abcdefabcdef
+print(s + ", " + s) #abcdef, abcdef
 
 #input，python2.x
 #input()可输入数字和字符串，输入string需要加引号，否则无法识别
@@ -47,12 +49,13 @@ pi = input("pi?3.14 or 3.141")
 pi = float(pi)'''
 
 #print
+#2.x的print可以不加(),句尾加‘,’不换行。统一起见还是按3.x的来写
 sum = 7
 print("sum is %d"%sum) #sum is 7
 print("sum is ", sum)  #('sum is ', 7)
 print("\"sum\"") #"sum"
-print sum,       #句尾加‘,’不换行，空格分割
-print sum
+print(sum,end=',')       
+print(sum)
 #class
 #class的属性可以在实例中随时添加和删除，不用在class中声明
 #built-in attr, 前后有__
