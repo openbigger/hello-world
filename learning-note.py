@@ -4,7 +4,7 @@
 #风格规范
 #https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/
 
-#terminal 里输入python（黄字）就进入python输入结界，以>>>开头
+#NOTE terminal 里输入python（黄字）就进入python输入结界，以>>>开头
 
 #布尔
 #0， None, [], {}, “” 都被认为是false.
@@ -74,3 +74,34 @@ del my_dog.age   #==delattr(my_dog,'age')
 #直接使用，不能久存
 Dog("mimi")
 Dog(my_dog.name).sit
+#数组的copy
+import numpy as np
+arraya = np.arange(4)
+#view，这种方式的两个矩阵互相影响，生成的矩阵不保管数据
+arrayaview = arraya.view()
+print(arrayaview.flags.owndata)#false
+arraya[0] = 10
+print(arrayaview)
+arrayaview[0] = 20
+print(arraya)
+#deep，这种方式copy出来的矩阵独立
+arrayacopy = arraya.copy()
+print(arrayacopy.flags.owndata)#true
+arraya[1] = 10
+print(arrayacopy)
+arrayacopy[1] = 20
+print(arraya)
+#b = a,这种方式两个矩阵互相影响
+arrayb = arraya
+print(arrayb.flags.owndata)#true
+arraya[2] = 10
+print(arrayb)
+arrayb[2] = 20
+print(arraya)
+#b = a[:],这种方式两个矩阵等同于view
+arraybb = arraya[:]
+print(arraybb.flags.owndata)#false
+arraya[3] = 10
+print(arraybb)
+arraybb[3] = 20
+print(arraya)
